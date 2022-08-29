@@ -36,7 +36,7 @@ const Xpnse = ( {xpnse, setXpnseEdit, deleteXpnse} ) => {
     const leadingActions = () => (
         <LeadingActions>
             <SwipeAction onClick={() =>  setXpnseEdit(xpnse)}>
-                Editar
+                Edit
             </SwipeAction>
         </LeadingActions>
     )
@@ -47,7 +47,7 @@ const Xpnse = ( {xpnse, setXpnseEdit, deleteXpnse} ) => {
                 onClick={() =>  deleteXpnse(id)}
                 destructive = {true}
             >
-                Eliminar
+                Remove
             </SwipeAction>
         </TrailingActions>
     )

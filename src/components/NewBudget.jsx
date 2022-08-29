@@ -20,8 +20,6 @@ const NewBudget = ({
 
       setMessage('');
       setValidBudget(true);
-
-      // console.log(budget);
   }
   
   return (

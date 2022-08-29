@@ -81,13 +81,12 @@ function App() {
 
   const saveXpnse = xpnse => {
     if(xpnse.id) {
-      // Actualizar
+      // Update
       const updatedXpnses = xpnses.map(xpnseState => xpnseState.id === xpnse.id ? xpnse : xpnseState )
       setXpenses(updatedXpnses);
       setXpnseEdit({})
     }else {
       //Nuevo Gasto
-      // console.log(xpnse);
       xpnse.id = idGen();
       xpnse.fecha = Date.now();
       setXpenses([...xpnses, xpnse ]);
@@ -101,7 +100,6 @@ function App() {
   }
 
   const deleteXpnse = id => {
-    // console.log('eliminando ', id)
     const updatedXpnses = xpnses.filter( xpnse => xpnse.id !== id );
 
     setXpenses(updatedXpnses);
