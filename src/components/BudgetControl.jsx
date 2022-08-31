@@ -25,7 +25,6 @@ const BudgetControl = ( {
         // calculate percentage of expenses
         const newPercent = (( (budget - totalAvailable) / budget ) * 100).toFixed(2);
 
-        // console.log(totalSpent);
         setAvailable(totalAvailable);
         setSpent(totalSpent);
 
@@ -62,7 +61,7 @@ const BudgetControl = ( {
                     textColor: percent > 100 ? '#DC2626' : '#3B82F6'
                 })}
                 value = {percent}
-                text = {`${percent}% Gastado`}
+                text = {`${percent}% Spent`}
             />
         </div>
 
@@ -72,16 +71,16 @@ const BudgetControl = ( {
                 type='button'
                 onClick={handleResetApp}
             >
-                Resetear App
+                Reset budget
             </button>
             <p>
-                <span>Presupuesto: </span> { formatQty(budget) }  
+                <span>Budget: </span> { formatQty(budget) }
             </p>
             <p className={`${avaiable < 0 ? 'negativo' : ''}`}>
-                <span>Disponible: </span> { formatQty(avaiable) }  
+                <span>Available: </span> { formatQty(avaiable) }
             </p>
             <p>
-                <span>Gastado: </span> { formatQty(spent) }  
+                <span>Spent: </span> { formatQty(spent) }
             </p>
         </div>
     </div>

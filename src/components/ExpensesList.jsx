@@ -13,7 +13,7 @@ const ExpensesList = ( {
             
             {filter ? (
                 <>    
-                    <h2>{filteredXpnses.length ?'Gastos' : 'No hay gastos en esta categoria'}</h2>
+                    <h2>{filteredXpnses.length ?'Expenses' : 'No expenses in this category'}</h2>
                     {filteredXpnses.map( xpnse => (
                         <Xpnse 
                         key = {xpnse.id}

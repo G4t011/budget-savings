@@ -12,7 +12,7 @@ const header = ({
   }) => {
   return (
         <header>
-            <h1>Planificador de Presupuestos</h1>
+            <h1>Budget Planner</h1>
 
             {/* ternary to know if budget is or don't valid if OK next step, if don't repeat form*/}
             {validBudget ? (

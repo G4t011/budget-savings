@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import Message from './Message';
 import CloseBtn from '../img/close.svg'
 
-// Props
 const Modal = ( {
     setModal, 
     animateMod, 
@@ -74,7 +73,7 @@ const Modal = ( {
                 {message && <Message type = "error">{message}</Message>}
 
                 <div className='campo'>
-                    <label htmlFor="nombre">Nombre Gasto</label>
+                    <label htmlFor="nombre">Name</label>
                     <input 
                         id='nombre'
                         type="text"
@@ -85,7 +84,7 @@ const Modal = ( {
                 </div>
 
                 <div className='campo'>
-                    <label htmlFor="cantidad">Cantidad</label>
+                    <label htmlFor="cantidad">Amount</label>
                     <input 
                         id='cantidad'
                         type="number"
@@ -96,27 +95,27 @@ const Modal = ( {
                 </div>
 
                 <div className='campo'>
-                    <label htmlFor="categoria">Categoria</label>
+                    <label htmlFor="categoria">Category</label>
                     <select 
                         id="categoria"
                         value={categoria}
                         onChange = { e => setCategoria(e.target.value)}
                         >
 
-                        <option value="">-- Seleccione --</option>
-                        <option value="ahorro">Ahorro</option>
-                        <option value="comida">Comida</option>
-                        <option value="casa">Casa</option>
-                        <option value="gastos">Gastos Varios</option>
-                        <option value="ocio">Ocio</option>
-                        <option value="salud">Salud</option>
-                        <option value="suscripciones">Suscripciones</option>
+                        <option value="">-- Select --</option>
+                        <option value="ahorro">Savings</option>
+                        <option value="comida">Food</option>
+                        <option value="casa">Home</option>
+                        <option value="gastos">Other expenses</option>
+                        <option value="ocio">Entertainment</option>
+                        <option value="salud">Health</option>
+                        <option value="suscripciones">Subscriptions</option>
                     </select>
                 </div>
 
                 <input 
                     type="submit"
-                    value={xpnseEdit.nombre ? 'Guardar Cambios' : 'Añadir Gasto'}
+                    value={xpnseEdit.nombre ? 'Save changes' : 'Add expense'}
                 />
 
 
